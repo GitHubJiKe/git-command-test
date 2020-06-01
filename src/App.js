@@ -5,16 +5,24 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
+import useListeningRouteChange from "./hooks/useListeningRouteChange";
+
+const App = () => {
+  useListeningRouteChange();
+  return (
+    <Switch>
+      <Route exact path="/" component={Home}></Route>
+      <Route path="/detail" component={Detail}></Route>
+    </Switch>
+  );
+};
 
 export default () => {
   return (
     <div className="app">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route path="/detail" component={Detail}></Route>
-        </Switch>
+        <App />
         <Footer />
       </Router>
     </div>

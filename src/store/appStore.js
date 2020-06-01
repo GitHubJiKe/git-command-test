@@ -1,5 +1,11 @@
+import { observable } from "mobx";
 class AppStore {
-  isHomePage = false;
+  @observable
+  isHomePage = true;
+
+  setIsHomePage(val) {
+    this.isHomePage = val;
+  }
 }
 
 export default new AppStore();
