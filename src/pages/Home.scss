@@ -1,0 +1,34 @@
+svg * {
+  transform-origin: 50%;
+}
+svg {
+  // background-color: white;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.danmu {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  animation: barrage 5s linear 0s;
+}
+// @keyframes danmurun {
+//   from {
+//     left: 100%;
+//     transform: translate3d(0, 0, 0);
+//   }
+//   to {
+//     left: 0;
+//     transform: translateX(-110%, 0, 0);
+//   }
+// }
