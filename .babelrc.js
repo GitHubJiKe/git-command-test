@@ -9,6 +9,8 @@ module.exports = {
         useESModules: true,
       },
     ],
+    ["@babel/plugin-proposal-decorators", { legacy: true }],
+    ["@babel/plugin-proposal-class-properties", { loose: true }],
   ],
   presets: [
     [
